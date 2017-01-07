@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Style Guide | Open Food Network</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,400italic,300,700,700italic|Oswald:300,400,700" rel="stylesheet" type="text/css"></link>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="/ofn-styleguide/styles/hgt-syntax.css">
+    <link rel="stylesheet" href="/ofn-styleguide/styles/hgt.css">
+
+    <link rel="stylesheet" href="/ofn-styleguide/assets/darkswarm/all.css">
+</head>
+
+<body class="hgt-body">
+  <div class="hgt-pagehead">
+    <div class="hgt-container">
+      <nav class="hgt-pagehead-nav" role="navigation">
+        <a href="index.html" class="hgt-pagehead-nav-item">Home</a>
+        <a href="/ofn-styleguide/brand.html" class="hgt-pagehead-nav-item">Brand</a>
+        <a href="/ofn-styleguide/base.html" class="hgt-pagehead-nav-item">Base</a>
+        <a href="/ofn-styleguide/components.html" class="hgt-pagehead-nav-item ">Components</a>
+      </nav>
+
+      <h1 class="hgt-pagehead-title">Open Food Network Style Guide</h1>
+    </div>
+  </div>
+
+  <div class="hgt-styleguide hgt-container">
+    <div class="hgt-columns">
+        <div class="hgt-column one-fifth">
+          <nav class="hgt-menu">
+
+            <a href="#buttons" class="hgt-menu-item">Buttons</a>
+
+            <a href="#forms" class="hgt-menu-item">Forms</a>
+
+            <a href="#navigation" class="hgt-menu-item">Navigation</a>
+
+            <a href="#search" class="hgt-menu-item">Search</a>
+
+            <a href="#typography" class="hgt-menu-item">Typography</a>
+
+          </nav>
+        </div>
+
+      <div class="hgt-column four-fifths">
+        <div class="hgt-content">
+<h1 id="buttons" class="styleguide">Buttons</h1>
+
+<h2>Default buttons</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <button class='button'>Button</button>
+<button class='button transparent'>Button</button>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%button</span><span class="nc">.button</span> Button
+<span class="nt">%button</span><span class="nc">.button.transparent</span> Button</pre>
+    </div>
+  </div>
+</div>
+
+<h2>Link buttons</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <a class='button'>Link</a>
+<a class='button primary'>Primary</a>
+<a class='button secondary'>Primary</a>
+<a class='button transparent'>Transparent</a>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%a</span><span class="nc">.button</span> Link
+<span class="nt">%a</span><span class="nc">.button.primary</span> Primary
+<span class="nt">%a</span><span class="nc">.button.secondary</span> Primary
+<span class="nt">%a</span><span class="nc">.button.transparent</span> Transparent</pre>
+    </div>
+  </div>
+</div>
+
+<h2>Primary and seccondary</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <button class='button primary'>Primary</button>
+<button class='button secondary'>Secondary</button>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%button</span><span class="nc">.button.primary</span> Primary
+<span class="nt">%button</span><span class="nc">.button.secondary</span> Secondary</pre>
+    </div>
+  </div>
+</div>
+
+<h2>Success</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <button class='button success'>Success</button>
+<button class='button success tiny'>Success</button>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%button</span><span class="nc">.button.success</span> Success
+<span class="nt">%button</span><span class="nc">.button.success.tiny</span> Success</pre>
+    </div>
+  </div>
+</div>
+
+<h2>Filter</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <button class='button filterbtn'>Filter</button>
+<button class='button filterbtn tiny'>Filter</button>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%button</span><span class="nc">.button.filterbtn</span> Filter
+<span class="nt">%button</span><span class="nc">.button.filterbtn.tiny</span> Filter</pre>
+    </div>
+  </div>
+</div>
+
+<h2>Alert</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <button class='button alert'>Alert</button>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%button</span><span class="nc">.button.alert</span> Alert</pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="forms" class="styleguide">Forms</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <form>
+  <label for='name'>Name</label>
+  <input class='form-control' id='name' type='text'>
+  <label for='email'>Email address</label>
+  <input class='form-control' id='email' type='email'>
+  <label>
+    <input type='checkbox'>
+    Remember me
+  </label>
+  <label>
+    <input checked='checked' id='herp' name='herpderp' type='radio'>
+    Herp
+  </label>
+  <label>
+    <input id='derp' name='herpderp' type='radio'>
+    Derp
+  </label>
+  <button class='button' type='submit'>Submit</button>
+</form>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%form</span>
+  <span class="nt">%label</span><span class="p">{</span><span class="ss">:for</span> <span class="o">=&gt;</span> <span class="s2">"name"</span><span class="p">}</span> Name
+  <span class="nt">%input</span><span class="nf">#name</span><span class="nc">.form-control</span><span class="p">{</span><span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">"text"</span><span class="p">}</span>/
+  <span class="nt">%label</span><span class="p">{</span><span class="ss">:for</span> <span class="o">=&gt;</span> <span class="s2">"email"</span><span class="p">}</span> Email address
+  <span class="nt">%input</span><span class="nf">#email</span><span class="nc">.form-control</span><span class="p">{</span><span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">"email"</span><span class="p">}</span>/
+  <span class="nt">%label</span>
+    <span class="nt">%input</span><span class="p">{</span><span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">"checkbox"</span><span class="p">}</span>/
+    Remember me
+  <span class="nt">%label</span>
+    <span class="nt">%input</span><span class="nf">#herp</span><span class="p">{</span><span class="ss">:checked</span> <span class="o">=&gt;</span> <span class="s2">"checked"</span><span class="p">,</span> <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">"herpderp"</span><span class="p">,</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">"radio"</span><span class="p">}</span>/
+    Herp
+  <span class="nt">%label</span>
+    <span class="nt">%input</span><span class="nf">#derp</span><span class="p">{</span><span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">"herpderp"</span><span class="p">,</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">"radio"</span><span class="p">}</span>/
+    Derp
+  <span class="nt">%button</span><span class="nc">.button</span><span class="p">{</span><span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">"submit"</span><span class="p">}</span> Submit</pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="navigation" class="styleguide">Navigation</h1>
+
+<h2>Primary menu</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <nav class='top-bar'>
+  <section class='top-bar-section'>
+    <ul>
+      <li>
+        <a>
+          <span class='nav-primary'>Shops</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class='nav-primary'>Map</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class='nav-primary'>Producers</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</nav>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%nav</span><span class="nc">.top-bar</span>
+  <span class="nt">%section</span><span class="nc">.top-bar-section</span>
+    <span class="nt">%ul</span>
+      <span class="nt">%li</span>
+        <span class="nt">%a</span>
+          <span class="nt">%span</span><span class="nc">.nav-primary</span> Shops
+      <span class="nt">%li</span>
+        <span class="nt">%a</span>
+          <span class="nt">%span</span><span class="nc">.nav-primary</span> Map
+      <span class="nt">%li</span>
+        <span class="nt">%a</span>
+          <span class="nt">%span</span><span class="nc">.nav-primary</span> Producers</pre>
+    </div>
+  </div>
+</div>
+
+<h2>Dropdown</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div style='padding-bottom: 70px'>
+  <div class='ofn-drop-down'>
+    <span>
+      <i class='icon-check'></i>
+      Actions
+      <i class='icon-caret-down'></i>
+    </span>
+    <div class='menu'>
+      <a class='menu_item'>
+        <span>Link</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%div</span><span class="p">{</span><span class="ss">style: </span><span class="s2">"padding-bottom: 70px"</span><span class="p">}</span>
+  <span class="nc">.ofn-drop-down</span>
+    <span class="nt">%span</span>
+      <span class="nt">%i</span><span class="nc">.icon-check</span>
+      Actions
+      <span class="nt">%i</span><span class="nc">.icon-caret-down</span>
+    <span class="nt">%div</span><span class="nc">.menu</span>
+      <span class="nt">%a</span><span class="nc">.menu_item</span>
+        <span class="nt">%span</span> Link</pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="search" class="styleguide">Search</h1>
+
+<h1 id="typography" class="styleguide">Typography</h1>
+
+<h2>Headings</h2>
+<div class="codeTable">
+  <table>
+    <tbody>
+
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <h1>Heading 1</h1>
+
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">%h1</span> Heading 1</pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <h2>Heading 2</h2>
+
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">%h2</span> Heading 2</pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <h3>Heading 3</h3>
+
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">%h3</span> Heading 3</pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <h4>Heading 4</h4>
+
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">%h4</span> Heading 4</pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <h5>Heading 5</h5>
+
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">%h5</span> Heading 5</pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <h6>Heading 6</h6>
+
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">%h6</span> Heading 6</pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+<h2>Body text</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus metus, vulputate eu faucibus quis, suscipit in tellus. Sed id tempus erat, eget egestas magna. In ac pulvinar purus. Nunc in sagittis lacus. Mauris tortor risus, egestas ac lacus id, scelerisque interdum libero. Sed pulvinar, lorem elementum ultricies eleifend, libero felis lacinia lorem, ut condimentum nisl sapien eu sem. Donec vitae magna interdum, molestie purus eu, iaculis lectus.</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%p</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus metus, vulputate eu faucibus quis, suscipit in tellus. Sed id tempus erat, eget egestas magna. In ac pulvinar purus. Nunc in sagittis lacus. Mauris tortor risus, egestas ac lacus id, scelerisque interdum libero. Sed pulvinar, lorem elementum ultricies eleifend, libero felis lacinia lorem, ut condimentum nisl sapien eu sem. Donec vitae magna interdum, molestie purus eu, iaculis lectus.</pre>
+    </div>
+  </div>
+</div>
+
+<h2>Inline text elements</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <p>
+  <strong>Bold text</strong>
+</p>
+<p>
+  <em>Italic text</em>
+</p>
+<p>
+  <u>Underlined text</u>
+</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%p</span>
+  <span class="nt">%strong</span> Bold text
+<span class="nt">%p</span>
+  <span class="nt">%em</span> Italic text
+<span class="nt">%p</span>
+  <span class="nt">%u</span> Underlined text</pre>
+    </div>
+  </div>
+</div>
+
+<h2>Blockquotes</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus metus, vulputate eu faucibus quis, suscipit in tellus.</blockquote>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%blockquote</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus metus, vulputate eu faucibus quis, suscipit in tellus.</pre>
+    </div>
+  </div>
+</div>
+
+<h2>Lists</h2>
+
+<h3>Unordered</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <ul>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>
+    Nulla volutpat aliquam velit
+    <ul>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ul>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
+</ul>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%ul</span>
+  <span class="nt">%li</span> Lorem ipsum dolor sit amet
+  <span class="nt">%li</span>
+    Nulla volutpat aliquam velit
+    <span class="nt">%ul</span>
+      <span class="nt">%li</span> Phasellus iaculis neque
+      <span class="nt">%li</span> Purus sodales ultricies
+      <span class="nt">%li</span> Vestibulum laoreet porttitor sem
+      <span class="nt">%li</span> Ac tristique libero volutpat at
+  <span class="nt">%li</span> Faucibus porta lacus fringilla vel
+  <span class="nt">%li</span> Aenean sit amet erat nunc
+  <span class="nt">%li</span> Eget porttitor lorem</pre>
+    </div>
+  </div>
+</div>
+
+<h3>Ordered</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <ol>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>
+    Nulla volutpat aliquam velit
+    <ol>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ol>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
+</ol>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%ol</span>
+  <span class="nt">%li</span> Lorem ipsum dolor sit amet
+  <span class="nt">%li</span>
+    Nulla volutpat aliquam velit
+    <span class="nt">%ol</span>
+      <span class="nt">%li</span> Phasellus iaculis neque
+      <span class="nt">%li</span> Purus sodales ultricies
+      <span class="nt">%li</span> Vestibulum laoreet porttitor sem
+      <span class="nt">%li</span> Ac tristique libero volutpat at
+  <span class="nt">%li</span> Faucibus porta lacus fringilla vel
+  <span class="nt">%li</span> Aenean sit amet erat nunc
+  <span class="nt">%li</span> Eget porttitor lorem</pre>
+    </div>
+  </div>
+</div>
+      </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="/styleguide/scripts/vendor/jquery.waypoints.min.js"></script>
+  <script src="/styleguide/scripts/vendor/sticky.min.js"></script>
+  <script src="/styleguide/scripts/vendor/infinite.min.js"></script>
+  <script src="/styleguide/scripts/hgt.js"></script>
+
+
+
+      <!-- <script type="text/javascript" src="dist/scripts/main.js"></script> -->
+
+
+
+
+</body>
+</html>

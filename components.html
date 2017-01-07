@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Style Guide | Open Food Network</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,400italic,300,700,700italic|Oswald:300,400,700" rel="stylesheet" type="text/css"></link>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="/ofn-styleguide/styles/hgt-syntax.css">
+    <link rel="stylesheet" href="/ofn-styleguide/styles/hgt.css">
+
+    <link rel="stylesheet" href="/ofn-styleguide/assets/darkswarm/all.css">
+</head>
+
+<body class="hgt-body">
+  <div class="hgt-pagehead">
+    <div class="hgt-container">
+      <nav class="hgt-pagehead-nav" role="navigation">
+        <a href="index.html" class="hgt-pagehead-nav-item">Home</a>
+        <a href="/ofn-styleguide/brand.html" class="hgt-pagehead-nav-item">Brand</a>
+        <a href="/ofn-styleguide/base.html" class="hgt-pagehead-nav-item">Base</a>
+        <a href="/ofn-styleguide/components.html" class="hgt-pagehead-nav-item ">Components</a>
+      </nav>
+
+      <h1 class="hgt-pagehead-title">Open Food Network Style Guide</h1>
+    </div>
+  </div>
+
+  <div class="hgt-styleguide hgt-container">
+    <div class="hgt-columns">
+        <div class="hgt-column one-fifth">
+          <nav class="hgt-menu">
+
+            <a href="#components" class="hgt-menu-item">Components</a>
+
+            <a href="#distributor" class="hgt-menu-item">Distributor</a>
+
+            <a href="#order_cycle" class="hgt-menu-item">Order cycle</a>
+
+            <a href="#products" class="hgt-menu-item">Products</a>
+
+            <a href="#taxons" class="hgt-menu-item">Taxons</a>
+
+          </nav>
+        </div>
+
+      <div class="hgt-column four-fifths">
+        <div class="hgt-content">
+<h1 id="components" class="styleguide">Components</h1>
+
+<h1 id="distributor" class="styleguide">Distributor</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <shop class='darkswarm'>
+  <navigation>
+    <distributor class='details row'>
+      <div class='small-12 medium-6 large-6 columns'>
+        <div id='distributor_title'>
+          <h3>
+            Enterprise 1
+          </h3>
+          <location>Herndon</location>
+        </div>
+      </div>
+    </distributor>
+  </navigation>
+</shop>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%shop</span><span class="nc">.darkswarm</span>
+  <span class="nt">%navigation</span>
+    <span class="nt">%distributor</span><span class="nc">.details.row</span>
+      <span class="nc">.small-12.medium-6.large-6.columns</span>
+        <span class="nf">#distributor_title</span>
+          <span class="nt">%h3</span>
+            Enterprise 1
+          <span class="nt">%location</span> Herndon</pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="order_cycle" class="styleguide">Order cycle</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <ordercycle>
+  <h4 class='text-right'>
+    <i class='ofn-i_032-closed-sign'></i>
+    Orders are closed
+  </h4>
+  <p class='text-right'>
+    Please wait until the next cycle opens (or contact us directly to see if we can accept any late orders)
+  </p>
+  <div class='text-right'>
+    <small>
+      <em></em>
+    </small>
+  </div>
+</ordercycle>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">%ordercycle</span>
+  <span class="nt">%h4</span><span class="nc">.text-right</span>
+    <span class="nt">%i</span><span class="nc">.ofn-i_032-closed-sign</span>
+    Orders are closed
+  <span class="nt">%p</span><span class="nc">.text-right</span>
+    Please wait until the next cycle opens (or contact us directly to see if we can accept any late orders)
+  <span class="nc">.text-right</span>
+    <span class="nt">%small</span>
+      <span class="nt">%em</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="products" class="styleguide">Products</h1>
+
+<h2>Line layout</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class='darkswarm'>
+  <products>
+    <product class='animate-repeat ng-scope' id='product-201797' ng-controller='ProductNodeCtrl' ng-repeat='product in visibleProducts track by product.id' style=''>
+      <div class='product-thumb'>
+        <a ng-click='triggerProductModal()'>
+          <i class='ofn-i_057-expand'></i>
+          <img ng-click='triggerProductModal()' ng-src='/assets/noimage/small.png' src='/assets/noimage/small.png'>
+        </a>
+      </div>
+      <div class='row summary'>
+        <div class='small-10 medium-10 large-11 columns summary-header'>
+          <h3>
+            <a ng-click='triggerProductModal()'>
+              <span class='ng-binding' ng-bind='::product.name'>Bass</span>
+              <i class='ofn-i_057-expand'></i>
+            </a>
+          </h3>
+          <small>
+            <em>
+              from
+            </em>
+            <span>
+              <a ng-transclude=''>
+                <i class='ofn-i_036-producers ng-scope'></i>
+                <span class='ng-binding ng-scope' ng-bind='::enterprise.name'>Sole of Discretion</span>
+              </a>
+            </span>
+          </small>
+        </div>
+        <div class='small-2 medium-2 large-1 columns text-center'>
+          <div class='taxon-flag'>
+            <render-svg path='/assets/default_taxon.png'>
+              <svg-wrapper></svg-wrapper>
+            </render-svg>
+          </div>
+        </div>
+      </div>
+      <div class='row variants'>
+        <div class='small-12 medium-4 large-4 columns variant-name'>
+          <div class='table-cell'>
+            <div class='inline ng-binding'>Bass - FILLET Frozen</div>
+          </div>
+        </div>
+        <ng-include class='ng-scope' src="'partials/shop_variant_no_group_buy.html'">
+          <div class='small-5 medium-3 large-3 columns text-right ng-scope' ng-if='::!variant.product.group_buy'>
+            <input class='ng-pristine ng-untouched ng-valid ng-empty ng-valid-min' id='variants_207155' integer='' min='0' name='variants[207155]' ng-disabled='!variant.on_demand &amp;&amp; variant.count_on_hand == 0' ng-model='variant.line_item.quantity' ofn-disable-scroll='' ofn-on-hand='1' placeholder='0' type='number'>
+          </div>
+        </ng-include>
+        <ng-include class='ng-scope' src="'partials/shop_variant_with_group_buy.html'"></ng-include>
+        <div class='small-3 medium-1 large-1 columns variant-unit'>
+          <div class='table-cell'>
+            <em class='ng-binding'>300g</em>
+          </div>
+        </div>
+        <div class='small-4 medium-2 large-2 columns variant-price'>
+          <div class='table-cell price ng-binding'>
+            <i class='ofn-i_009-close'></i>
+            £10.18
+            <button class='graph-button ng-isolate-scope' ng-class='{open: tt_isOpen}' price-breakdown-animation='' price-breakdown-append-to-body='true' price-breakdown-placement='left' price-breakdown='_' variant='variant'></button>
+          </div>
+        </div>
+        <div class='small-12 medium-2 large-2 columns total-price text-right'>
+          <div class='table-cell'>
+            <strong class='ng-binding' ng-class='{filled: variant.line_item.total_price}'>
+              £0.00
+            </strong>
+          </div>
+        </div>
+      </div>
+    </product>
+  </products>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nc">.darkswarm</span>
+  <span class="nt">%products</span>
+    <span class="nt">%product</span><span class="nf">#product-201797</span><span class="nc">.animate-repeat.ng-scope</span><span class="p">{</span><span class="s2">"ng-controller"</span> <span class="o">=&gt;</span> <span class="s2">"ProductNodeCtrl"</span><span class="p">,</span> <span class="s2">"ng-repeat"</span> <span class="o">=&gt;</span> <span class="s2">"product in visibleProducts track by product.id"</span><span class="p">,</span> <span class="ss">:style</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">}</span>
+      <span class="nc">.product-thumb</span>
+        <span class="nt">%a</span><span class="p">{</span><span class="s2">"ng-click"</span> <span class="o">=&gt;</span> <span class="s2">"triggerProductModal()"</span><span class="p">}</span>
+          <span class="nt">%i</span><span class="nc">.ofn-i_057-expand</span>
+          <span class="nt">%img</span><span class="p">{</span><span class="s2">"ng-click"</span> <span class="o">=&gt;</span> <span class="s2">"triggerProductModal()"</span><span class="p">,</span> <span class="s2">"ng-src"</span> <span class="o">=&gt;</span> <span class="s2">"/assets/noimage/small.png"</span><span class="p">,</span> <span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"/assets/noimage/small.png"</span><span class="p">}</span>/
+      <span class="nc">.row.summary</span>
+        <span class="nc">.small-10.medium-10.large-11.columns.summary-header</span>
+          <span class="nt">%h3</span>
+            <span class="nt">%a</span><span class="p">{</span><span class="s2">"ng-click"</span> <span class="o">=&gt;</span> <span class="s2">"triggerProductModal()"</span><span class="p">}</span>
+              <span class="nt">%span</span><span class="nc">.ng-binding</span><span class="p">{</span><span class="s2">"ng-bind"</span> <span class="o">=&gt;</span> <span class="s2">"::product.name"</span><span class="p">}</span> Bass
+              <span class="nt">%i</span><span class="nc">.ofn-i_057-expand</span>
+          <span class="nt">%small</span>
+            <span class="nt">%em</span>
+              from
+            <span class="nt">%span</span>
+              <span class="nt">%a</span><span class="p">{</span><span class="s2">"ng-transclude"</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">}</span>
+                <span class="nt">%i</span><span class="nc">.ofn-i_036-producers.ng-scope</span>
+                <span class="nt">%span</span><span class="nc">.ng-binding.ng-scope</span><span class="p">{</span><span class="s2">"ng-bind"</span> <span class="o">=&gt;</span> <span class="s2">"::enterprise.name"</span><span class="p">}</span> Sole of Discretion
+        <span class="nc">.small-2.medium-2.large-1.columns.text-center</span>
+          <span class="nc">.taxon-flag</span>
+            <span class="nt">%render-svg</span><span class="p">{</span><span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">"/assets/default_taxon.png"</span><span class="p">}</span>
+              <span class="nt">%svg-wrapper</span>
+      <span class="nc">.row.variants</span>
+        <span class="nc">.small-12.medium-4.large-4.columns.variant-name</span>
+          <span class="nc">.table-cell</span>
+            <span class="nc">.inline.ng-binding</span> Bass - FILLET Frozen
+        <span class="nt">%ng-include</span><span class="nc">.ng-scope</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"'partials/shop_variant_no_group_buy.html'"</span><span class="p">}</span>
+          <span class="nc">.small-5.medium-3.large-3.columns.text-right.ng-scope</span><span class="p">{</span><span class="s2">"ng-if"</span> <span class="o">=&gt;</span> <span class="s2">"::!variant.product.group_buy"</span><span class="p">}</span>
+            <span class="nt">%input</span><span class="nf">#variants_207155</span><span class="nc">.ng-pristine.ng-untouched.ng-valid.ng-empty.ng-valid-min</span><span class="p">{</span><span class="ss">:integer</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span> <span class="ss">:min</span> <span class="o">=&gt;</span> <span class="s2">"0"</span><span class="p">,</span> <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">"variants[207155]"</span><span class="p">,</span> <span class="s2">"ng-disabled"</span> <span class="o">=&gt;</span> <span class="s2">"!variant.on_demand &amp;&amp; variant.count_on_hand == 0"</span><span class="p">,</span> <span class="s2">"ng-model"</span> <span class="o">=&gt;</span> <span class="s2">"variant.line_item.quantity"</span><span class="p">,</span> <span class="s2">"ofn-disable-scroll"</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"ofn-on-hand"</span> <span class="o">=&gt;</span> <span class="s2">"1"</span><span class="p">,</span> <span class="ss">:placeholder</span> <span class="o">=&gt;</span> <span class="s2">"0"</span><span class="p">,</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">"number"</span><span class="p">}</span>/
+        <span class="nt">%ng-include</span><span class="nc">.ng-scope</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"'partials/shop_variant_with_group_buy.html'"</span><span class="p">}</span>
+        <span class="nc">.small-3.medium-1.large-1.columns.variant-unit</span>
+          <span class="nc">.table-cell</span>
+            <span class="nt">%em</span><span class="nc">.ng-binding</span> 300g
+        <span class="nc">.small-4.medium-2.large-2.columns.variant-price</span>
+          <span class="nc">.table-cell.price.ng-binding</span>
+            <span class="nt">%i</span><span class="nc">.ofn-i_009-close</span>
+            £10.18
+            <span class="nt">%button</span><span class="nc">.graph-button.ng-isolate-scope</span><span class="p">{</span><span class="s2">"ng-class"</span> <span class="o">=&gt;</span> <span class="s2">"{open: tt_isOpen}"</span><span class="p">,</span> <span class="s2">"price-breakdown"</span> <span class="o">=&gt;</span> <span class="s2">"_"</span><span class="p">,</span> <span class="s2">"price-breakdown-animation"</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"price-breakdown-append-to-body"</span> <span class="o">=&gt;</span> <span class="s2">"true"</span><span class="p">,</span> <span class="s2">"price-breakdown-placement"</span> <span class="o">=&gt;</span> <span class="s2">"left"</span><span class="p">,</span> <span class="ss">:variant</span> <span class="o">=&gt;</span> <span class="s2">"variant"</span><span class="p">}</span>
+        <span class="nc">.small-12.medium-2.large-2.columns.total-price.text-right</span>
+          <span class="nc">.table-cell</span>
+            <span class="nt">%strong</span><span class="nc">.ng-binding</span><span class="p">{</span><span class="s2">"ng-class"</span> <span class="o">=&gt;</span> <span class="s2">"{filled: variant.line_item.total_price}"</span><span class="p">}</span>
+              £0.00</pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="taxons" class="styleguide">Taxons</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class='filter-shopfront taxon-selectors'>
+  <ul class='taxon-selectors'>
+    <li>
+      <a class='button'>Meat</a>
+    </li>
+    <li>
+      <a class='button'>Fish</a>
+    </li>
+    <li>
+      <a class='button'>Bread</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nc">.filter-shopfront.taxon-selectors</span>
+  <span class="nt">%ul</span><span class="nc">.taxon-selectors</span>
+    <span class="nt">%li</span>
+      <span class="nt">%a</span><span class="nc">.button</span> Meat
+    <span class="nt">%li</span>
+      <span class="nt">%a</span><span class="nc">.button</span> Fish
+    <span class="nt">%li</span>
+      <span class="nt">%a</span><span class="nc">.button</span> Bread</pre>
+    </div>
+  </div>
+</div>
+      </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="/styleguide/scripts/vendor/jquery.waypoints.min.js"></script>
+  <script src="/styleguide/scripts/vendor/sticky.min.js"></script>
+  <script src="/styleguide/scripts/vendor/infinite.min.js"></script>
+  <script src="/styleguide/scripts/hgt.js"></script>
+
+
+
+      <!-- <script type="text/javascript" src="dist/scripts/main.js"></script> -->
+
+
+
+
+</body>
+</html>
